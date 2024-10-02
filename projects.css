@@ -1,0 +1,246 @@
+/* Projects Page Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    transition: background 0.3s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Center the logo and text vertically */
+}
+
+.logo-img {
+    width: 40px; /* Set the width of your logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+
+/* Glowing line below navbar */
+.navbar::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 136, 0, 0.5);
+    box-shadow: 0 0 10px rgba(255, 136, 0, 0.7);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    animation: glowing-line 2s infinite alternate;
+}
+
+@keyframes glowing-line {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: #ff8800;
+    transition: color 0.3s ease;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#navbar {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+#navbar li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+#navbar li a:hover {
+    color: #ff6600;
+}
+
+/* Header Styles */
+
+
+/* Projects Section */
+.projects-section {
+    padding: 100px 30px; /* Space from top */
+    text-align: center;
+}
+
+.projects-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 3fr); /* 6 columns */
+    gap: 20px; /* Space between cards */
+}
+
+/* Project Logo Card */
+.project-logo-card,
+.project-description-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 0.5s forwards; /* Fade in effect */
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Logo Image */
+.project-logo {
+    max-width: 80%; /* Adjust logo size */
+    height: auto;
+    transition: transform 0.3s;
+}
+
+/* Hover Effect on Logo */
+.project-logo-card:hover .project-logo {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Project Description Card */
+.project-description-card h3 {
+    margin: 10px 0;
+}
+
+.project-description-card p {
+    margin-bottom: 10px;
+}
+
+/* Button Style */
+.view-project-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(145deg, #ff8800, #ff4e00);
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 140, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.view-project-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 140, 0, 0.7);
+}
+
+
+/* Footer */
+/* Footer Styles */
+.footer {
+    margin-top: 10px;
+    background-color: #111; /* Dark background */
+    color: #fff; /* White text */
+    padding: 40px 20px; /* Padding for space */
+    text-align: center; /* Center text */
+    position: relative; /* Allow absolute positioning for inner elements */
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center content */
+}
+
+.footer-logo h2 {
+    margin-bottom: 20px; /* Space below logo */
+    font-size: 2rem; /* Logo size */
+    color: #ff8800; /* Logo color */
+}
+
+/* Footer Navigation */
+.footer-nav {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    display: flex; /* Flex layout for horizontal menu */
+    gap: 15px; /* Space between items */
+}
+
+.footer-nav li a {
+    color: #fff; /* White text */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.footer-nav li a:hover {
+    color: #ff8800; /* Change color on hover */
+}
+
+/* Footer Social Icons */
+.footer-socials {
+    margin: 20px 0; /* Margin for space */
+}
+
+.social-icon {
+    color: #fff; /* Icon color */
+    margin: 0 10px; /* Space between icons */
+    font-size: 1.5rem; /* Icon size */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.social-icon:hover {
+    color: #ff8800; /* Change color on hover */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 20px; /* Space above */
+    font-size: 0.9rem; /* Smaller font for copyright */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack content vertically on small screens */
+    }
+}

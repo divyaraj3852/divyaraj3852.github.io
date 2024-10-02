@@ -1,0 +1,273 @@
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+    color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    transition: background 0.3s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Center the logo and text vertically */
+}
+
+.logo-img {
+    width: 40px; /* Set the width of your logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+
+/* Glowing line below navbar */
+.navbar::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 136, 0, 0.5);
+    box-shadow: 0 0 10px rgba(255, 136, 0, 0.7);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    animation: glowing-line 2s infinite alternate;
+}
+
+@keyframes glowing-line {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: #ff8800;
+    transition: color 0.3s ease;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#navbar {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+#navbar li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+#navbar li a:hover {
+    color: #ff6600;
+}
+
+/* Services Section */
+.services {
+    margin: 50px 50px;
+    padding: 100px 20px; /* Padding for space */
+    text-align: center; /* Center text */
+}
+
+.services h2 {
+    font-size: 2.5rem; /* Title size */
+    margin-bottom: 20px; /* Space below title */
+}
+
+.services p {
+    font-size: 1.2rem; /* Description size */
+    margin-bottom: 50px; /* Space below description */
+}
+
+/* Service Container */
+.service-container {
+    display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between cards */
+}
+
+/* Service Card */
+.service-card {
+    background: rgba(255, 255, 255, 0.1); /* Background color */
+    backdrop-filter: blur(15px); /* Glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover */
+}
+
+.service-icon {
+    font-size: 3rem; /* Icon size */
+    margin-bottom: 10px; /* Space below icon */
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Call to Action */
+.cta {
+    text-align: center; /* Center text */
+    margin-top: 50px; /* Margin */
+    margin-bottom: 50px;
+}
+
+.cta h2 {
+    font-size: 2rem; /* Title size */
+}
+
+.cta p {
+    font-size: 1.2rem; /* Description size */
+}
+
+/* Button Styles */
+.glossy-button {
+    padding: 15px 30px; /* Padding for button */
+    font-size: 1.2rem; /* Button size */
+    background: linear-gradient(145deg, #ff8800, #ff4e00); /* Gradient */
+    border: none; /* No border */
+    border-radius: 25px; /* Rounded corners */
+    color: #fff; /* Text color */
+    cursor: pointer; /* Pointer on hover */
+    box-shadow: 0 5px 15px rgba(255, 140, 0, 0.5); /* Shadow effect */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for effects */
+}
+
+/* Button Hover Effect */
+.glossy-button:hover {
+    transform: scale(1.05); /* Scale button on hover */
+    box-shadow: 0 8px 20px rgba(255, 140, 0, 0.7); /* Shadow effect */
+}
+
+/* FAQ Section */
+.faq {
+    margin: 50px 50px; /* Margin for section */
+    text-align: left; /* Align text to the left */
+}
+
+.faq h2 {
+    font-size: 2rem; /* Title size */
+    margin-bottom: 20px; /* Space below title */
+}
+
+.faq-item {
+    margin: 10px 0; /* Margin for each item */
+    background: rgba(255, 255, 255, 0.1); /* Background color */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s; /* Transition for effect */
+}
+
+/* FAQ Item Hover Effect */
+.faq-item:hover {
+    transform: translateY(-5px); /* Lift item on hover */
+}
+
+/* FAQ Question */
+.faq-question {
+    padding: 15px; /* Padding inside FAQ question */
+    cursor: pointer; /* Pointer on hover */
+    display: flex; /* Use flex for layout */
+    justify-content: space-between; /* Space items */
+    align-items: center; /* Center vertically */
+}
+
+/* FAQ Answer */
+.faq-answer {
+    display: none; /* Hide by default */
+    padding: 15px; /* Padding for answer */
+}
+
+/* Footer */
+/* Footer Styles */
+.footer {
+    margin-top: 10px;
+    background-color: #111; /* Dark background */
+    color: #fff; /* White text */
+    padding: 40px 20px; /* Padding for space */
+    text-align: center; /* Center text */
+    position: relative; /* Allow absolute positioning for inner elements */
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center content */
+}
+
+.footer-logo h2 {
+    margin-bottom: 20px; /* Space below logo */
+    font-size: 2rem; /* Logo size */
+    color: #ff8800; /* Logo color */
+}
+
+/* Footer Navigation */
+.footer-nav {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    display: flex; /* Flex layout for horizontal menu */
+    gap: 15px; /* Space between items */
+}
+
+.footer-nav li a {
+    color: #fff; /* White text */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.footer-nav li a:hover {
+    color: #ff8800; /* Change color on hover */
+}
+
+/* Footer Social Icons */
+.footer-socials {
+    margin: 20px 0; /* Margin for space */
+}
+
+.social-icon {
+    color: #fff; /* Icon color */
+    margin: 0 10px; /* Space between icons */
+    font-size: 1.5rem; /* Icon size */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.social-icon:hover {
+    color: #ff8800; /* Change color on hover */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 20px; /* Space above */
+    font-size: 0.9rem; /* Smaller font for copyright */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack content vertically on small screens */
+    }
+}

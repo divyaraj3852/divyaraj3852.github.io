@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="services.css"> <!-- Link to the new CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <title>Our Services</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo2.png" alt="Logo" class="logo-img">
+            MyPortfolio</div>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="services">
+        <h2>Our Services</h2>
+        <p>We offer a range of services to help you build a strong online presence.</p>
+        <div class="service-container">
+            <div class="service-card">
+                <i class="fas fa-code service-icon"></i>
+                <h3>Web Development</h3>
+                <p>Creating responsive websites with the latest technologies. We ensure your website is user-friendly and optimized for performance.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-paint-brush service-icon"></i>
+                <h3>UI/UX Design</h3>
+                <p>Crafting beautiful and intuitive user interfaces. Our designs focus on user experience to engage visitors effectively.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-search service-icon"></i>
+                <h3>SEO Optimization</h3>
+                <p>Improving website visibility on search engines. We implement the best SEO practices to increase your site's organic traffic.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-mobile-alt service-icon"></i>
+                <h3>Responsive Design</h3>
+                <p>Ensuring your website looks great on all devices. Our responsive designs adapt seamlessly to different screen sizes.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-cogs service-icon"></i>
+                <h3>Maintenance & Support</h3>
+                <p>Providing ongoing support and maintenance to keep your website running smoothly and securely.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-comments service-icon"></i>
+                <h3>Consultation Services</h3>
+                <p>Offering expert advice to help you strategize your online presence. We guide you on best practices and tools for success.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-user-shield service-icon"></i>
+                <h3>Security Services</h3>
+                <p>Implementing robust security measures to protect your website from threats and vulnerabilities.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-chart-line service-icon"></i>
+                <h3>Analytics & Reporting</h3>
+                <p>Providing detailed analytics and reporting to help you understand your website's performance and improve your strategies.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-envelope service-icon"></i>
+                <h3>Email Marketing</h3>
+                <p>Creating effective email marketing campaigns to engage your audience and boost conversions.</p>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <section class="cta">
+            <h2>Ready to Get Started?</h2>
+            <p>Contact us today for a free consultation!</p>
+            <button class="glossy-button" onclick="location.href='contact.html'">Get in Touch</button>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h3>What services do you offer?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We offer web development, UI/UX design, SEO optimization, and more!</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h3>How long does it take to complete a project?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>The timeline depends on the project scope, but we always strive to meet deadlines.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h3>Do you provide ongoing support?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we offer maintenance and support packages to keep your site running smoothly.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        // script.js
+function toggleFAQ(question) {
+    const answer = question.nextElementSibling;
+    answer.style.display = answer.style.display === 'block' ? 'none' : 'block'; // Toggle display
+}
+
+    </script>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>MyPortfolio</h2>
+            </div>
+            <ul class="footer-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="footer-socials">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MyPortfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> <!-- Add your JS for testimonials -->
+</body>
+</html>
